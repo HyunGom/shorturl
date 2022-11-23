@@ -28,8 +28,7 @@ DEBUG = True
 ALLOWED_HOSTS = ["*"]
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://*.web-production-0681.up.railway.app/",
-    "http://127.0.0.1:8000/",
+    "https://*.hkurls.up.railway.app/",
 ]
 
 # Application definition
