@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'uikit/styles/uikit.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/app.css' %}" />
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <title>URL Shortener</title>
+</head>
+
+
+<body>
+    <main class="container">
+        <h1>URL Shortener</h1>
+        <form class="form" id="shortener" method="POST">
+
+            {% csrf_token %}
+
+            <div class="form__field">
+                <label for="formInput#text">Long Url: </label>
+                <input class="input input--text" type="text" name="link" id="link" placeholder="URL goes here" required>
+            </div>
+
+            <button class="btn btn--main" type="submit" name="shorten" id="shorten">Shorten It</button>
+        </form>
+
+        <section id="shortened">
+            <h2 id="output">OUTPUT</h2>
+            <button class="btn btn--main--outline" name="ctrlcv" id="ctrlcv" onclick="ctrl_cv()">Copy New
+                Link</button>
+        </section>
+
+    </main>
+</body>
+
+<script src="{% static 'js/main.js' %}"></script>
+
+</html>
