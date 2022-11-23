@@ -9,7 +9,7 @@ $(document).on("submit", "#shortener", function (e) {
             csrfmiddlewaretoken: $("input[name=csrfmiddlewaretoken]").val(),
         },
         success: function (data) {
-            base_url = "https://web-production-0681.up.railway.app/"
+            base_url = "https://hkurls.up.railway.app/"
             $("h2").html(base_url + data)
         }
 
